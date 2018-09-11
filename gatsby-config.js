@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Lisa Randall Therapy",
-    author: "Nick Randall",
-    description: "Lisa Randall - Licensed Master Social Worker"
+    title: 'Lisa Randall Therapy',
+    author: 'Nick Randall',
+    description: 'Lisa Randall - Licensed Master Social Worker',
   },
   pathPrefix: '/',
   plugins: [
@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/posts`,
-        name: "posts",
+        name: 'posts',
       },
     },
     {
@@ -30,13 +30,13 @@ module.exports = {
               maxWidth: 630,
             },
           },
-          "gatsby-remark-copy-linked-files",
+          'gatsby-remark-copy-linked-files',
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
   ],
 }
