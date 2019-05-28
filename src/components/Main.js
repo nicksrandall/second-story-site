@@ -180,7 +180,7 @@ class Main extends React.Component {
               <div className="column">
                 <h3>Phone</h3>
                 <p>
-                  <a href="tel:4803715213">(480) 688-8282</a>
+                  <a href="tel:4806888282">(480) 688-8282</a>
                 </p>
               </div>
             </div>
