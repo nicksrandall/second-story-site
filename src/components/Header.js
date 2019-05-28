@@ -60,9 +60,4 @@ const Header = props => (
   </header>
 )
 
-Header.propTypes = {
-  onOpenArticle: React.PropTypes.func,
-  timeout: React.PropTypes.bool,
-}
-
 export default Header

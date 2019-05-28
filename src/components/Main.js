@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import Appt from '../components/Appt.js'
 import pic01 from '../images/lisa-crop.jpeg'
@@ -221,14 +221,6 @@ class Main extends React.Component {
       </div>
     )
   }
-}
-
-Main.propTypes = {
-  route: React.PropTypes.object,
-  article: React.PropTypes.string,
-  articleTimeout: React.PropTypes.bool,
-  onCloseArticle: React.PropTypes.func,
-  timeout: React.PropTypes.bool,
 }
 
 export default Main
