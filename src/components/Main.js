@@ -146,7 +146,7 @@ class Main extends React.Component {
           <p>
             If you do not show up for your scheduled therapy appointment, and
             you have not notified us at least 24 hours in advance, you will be
-            required to pay a $50 no-show fee.
+            required to pay a $125 no-show fee.
           </p>
           {close}
         </article>
