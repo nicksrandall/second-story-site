@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Lisa Randall Therapy',
-    author: 'Nick Randall',
-    description: 'Lisa Randall - Licensed Master Social Worker',
+    author: 'Lisa Randall',
+    description: 'Lisa Randall - Licensed Clinical Social Worker',
   },
   pathPrefix: '/',
   plugins: [
