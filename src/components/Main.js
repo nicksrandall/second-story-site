@@ -220,7 +220,7 @@ const Main = props => {
               <ul className="icons">
                 <li>
                   <a
-                    href="https://www.facebook.com/lisarandallLMSW"
+                    href="https://www.facebook.com/secondstorycounselingservices"
                     className="icon fa-facebook"
                   >
                     <span className="label">Facebook</span>
