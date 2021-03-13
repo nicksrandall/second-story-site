@@ -80,7 +80,6 @@ const Main = props => {
       }
     }
   `)
-  console.log('data', data)
 
   let close = (
     <div
@@ -104,7 +103,7 @@ const Main = props => {
         style={{ display: 'none' }}
       >
         {data.bios.edges.map(edge => {
-          const image = getImage(edge.node.featuredImage.node.localFile)
+          const image = getImage(edge.node?.featuredImage.node.localFile)
           return (
             <div>
               <h2 className="major">{edge.node.title}</h2>
@@ -132,7 +131,7 @@ const Main = props => {
       >
         <h2 className="major">{data.specialties.title}</h2>
         <GatsbyImage
-          image={getImage(data.specialties.featuredImage?.node?.localFile)}
+          image={getImage(data.specialties?.featuredImage?.node?.localFile)}
           alt={data.specialties.title}
         />
         <div dangerouslySetInnerHTML={{ __html: data.specialties.content }} />
@@ -149,7 +148,7 @@ const Main = props => {
       >
         <h2 className="major">{data.events.title}</h2>
         <GatsbyImage
-          image={getImage(data.events.featuredImage?.node?.localFile)}
+          image={getImage(data.events?.featuredImage?.node?.localFile)}
           alt={data.events.title}
         />
         <div dangerouslySetInnerHTML={{ __html: data.events.content }} />
@@ -166,7 +165,7 @@ const Main = props => {
       >
         <h2 className="major">{data.rates.title}</h2>
         <GatsbyImage
-          image={getImage(data.rates.featuredImage?.node?.localFile)}
+          image={getImage(data.rates?.featuredImage?.node?.localFile)}
           alt={data.rates.title}
         />
         <div dangerouslySetInnerHTML={{ __html: data.rates.content }} />
