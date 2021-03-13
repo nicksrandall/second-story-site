@@ -1,11 +1,20 @@
 module.exports = {
   siteMetadata: {
-    title: 'Lisa Randall Therapy',
+    title: 'Second Story Counseling',
     author: 'Lisa Randall',
-    description: 'Lisa Randall - Licensed Clinical Social Worker',
+    description: 'Second Story Counseling Services',
   },
   pathPrefix: '/',
   plugins: [
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        // the only required plugin option for WordPress is the GraphQL url.
+        url:
+          process.env.WPGRAPHQL_URL ||
+          `http://cms.secondstorycounselinggroup.com/graphql`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,11 +37,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-preact`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

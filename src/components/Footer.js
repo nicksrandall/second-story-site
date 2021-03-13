@@ -4,7 +4,7 @@ import Appt from './Appt.js'
 const Footer = props => (
   <footer id="footer" style={props.timeout ? { display: 'none' } : {}}>
     <Appt />
-    <p className="copyright">&copy; Lisa Randall Therapy.</p>
+    <p className="copyright">&copy; Second Story Counseling.</p>
   </footer>
 )
 

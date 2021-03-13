@@ -35,6 +35,10 @@
     border-radius: _size(border-radius);
     opacity: 0;
 
+    figure.aligncenter {
+      text-align: center;
+    }
+
     &.timeout {
       display: none;
     }

@@ -5,7 +5,7 @@ const Header = props => (
     <div className="logo" />
     <div className="content">
       <div className="inner">
-        <h1>Lisa Randall Therapy</h1>
+        <h1>Second Story Counseling</h1>
         <p>
           "THE CURIOUS PARADOX IS THAT WHEN I ACCEPT MYSELF JUST AS I AM, THEN I
           CAN CHANGE." <br />
@@ -19,17 +19,17 @@ const Header = props => (
           <a
             href="#"
             onClick={() => {
-              props.onOpenArticle('intro')
+              props.onOpenArticle('therapists')
             }}
           >
-            Intro
+            Therapists
           </a>
         </li>
         <li>
           <a
             href="#"
             onClick={() => {
-              props.onOpenArticle('work')
+              props.onOpenArticle('specialties')
             }}
           >
             Services
@@ -39,7 +39,17 @@ const Header = props => (
           <a
             href="#"
             onClick={() => {
-              props.onOpenArticle('about')
+              props.onOpenArticle('events')
+            }}
+          >
+            Upcoming Events
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onClick={() => {
+              props.onOpenArticle('rates')
             }}
           >
             Rates & Insurance
