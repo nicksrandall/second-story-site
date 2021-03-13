@@ -202,7 +202,7 @@ const Main = props => {
             <div className="column">
               <h3>Phone</h3>
               <p>
-                <a href="tel:4806888282">(480) 688-8282</a>
+                <a href="tel:6025295177">(602) 529-5177</a>
               </p>
             </div>
           </div>
@@ -228,7 +228,7 @@ const Main = props => {
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/lisarandalltherapy"
+                    href="https://www.instagram.com/secondstorycounseling"
                     className="icon fa-instagram"
                   >
                     <span className="label">Instagram</span>
