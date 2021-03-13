@@ -105,7 +105,7 @@ const Main = props => {
         {data.bios.edges.map(edge => {
           const image = getImage(edge.node?.featuredImage.node.localFile)
           return (
-            <div>
+            <div className="profile-main">
               <h2 className="major">{edge.node.title}</h2>
               <div className="profile-container">
                 <GatsbyImage
@@ -115,10 +115,10 @@ const Main = props => {
                 />
               </div>
               <div dangerouslySetInnerHTML={{ __html: edge.node.content }} />
+              <Appt />
             </div>
           )
         })}
-        <Appt />
         {close}
       </article>
 
