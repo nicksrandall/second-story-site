@@ -9,7 +9,7 @@ import pic03 from '../images/mom-and-son-optimized.jpg'
 const Main = props => {
   const data = useStaticQuery(graphql`
     query MainQuery {
-      bios: allWpBio {
+      bios: allWpBio(sort: {fields: date, order: ASC}) {
         edges {
           node {
             title
