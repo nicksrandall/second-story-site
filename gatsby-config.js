@@ -42,6 +42,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
