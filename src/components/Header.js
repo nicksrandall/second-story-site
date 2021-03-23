@@ -6,11 +6,11 @@ const Header = props => (
     <div className="content">
       <div className="inner">
         <h1>Second Story Counseling</h1>
-        <p>
+        <div>
           "THE CURIOUS PARADOX IS THAT WHEN I ACCEPT MYSELF JUST AS I AM, THEN I
-          CAN CHANGE." <br />
-          ~CARL ROGERS
-        </p>
+          CAN CHANGE."
+        </div>
+        <div>~CARL ROGERS</div>
       </div>
     </div>
     <nav>

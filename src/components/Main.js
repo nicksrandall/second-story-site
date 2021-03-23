@@ -210,8 +210,8 @@ const Main = props => {
             <div className="column">
               <h3>Email</h3>
               <p>
-                <a href="mailto:info@secondstorycounselinggroup.com">
-                  info@secondstorycounselinggroup.com
+                <a href="mailto:info@mysecondstory.com">
+                  info@mysecondstory.com
                 </a>
               </p>
             </div>
