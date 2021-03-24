@@ -42,7 +42,7 @@ const Header = props => (
               props.onOpenArticle('events')
             }}
           >
-            Upcoming Events
+            Groups & Workshops
           </a>
         </li>
         <li>
