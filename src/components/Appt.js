@@ -4,7 +4,7 @@ export default () => {
   return (
     <div className="spwidget-button-wrapper">
       <a
-        href="https://lisa-randall.clientsecure.me"
+        href="https://mysecondstory.clientsecure.me"
         className="spwidget-button"
         target="_blank"
         rel="noreferrer noopener"

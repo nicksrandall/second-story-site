@@ -1,3 +1,3 @@
-# Lisa Randall Therapy Site
+# MySecondStory.com website
 
 Built with Gatsby JS.
