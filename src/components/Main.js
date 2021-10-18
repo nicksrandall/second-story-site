@@ -2,14 +2,15 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import Therapists from './therapists.js'
 
 import Appt from '../components/Appt.js'
 import pic03 from '../images/mom-and-son-optimized.jpg'
 
-const Main = props => {
+const Main = (props) => {
   const data = useStaticQuery(graphql`
     query MainQuery {
-      bios: allWpBio(sort: {fields: date, order: ASC}) {
+      bios: allWpBio(sort: { fields: date, order: ASC }) {
         edges {
           node {
             title
@@ -95,32 +96,12 @@ const Main = props => {
       id="main"
       style={props.timeout ? { display: 'flex' } : { display: 'none' }}
     >
-      <article
-        id="therapists"
-        className={`${props.article === 'therapists' ? 'active' : ''} ${
-          props.articleTimeout ? 'timeout' : ''
-        }`}
-        style={{ display: 'none' }}
-      >
-        {data.bios.edges.map(edge => {
-          const image = getImage(edge.node?.featuredImage.node.localFile)
-          return (
-            <div className="profile-main">
-              <h2 className="major">{edge.node.title}</h2>
-              <div className="profile-container">
-                <GatsbyImage
-                  className="profile"
-                  image={image}
-                  alt={edge.node.title}
-                />
-              </div>
-              <div dangerouslySetInnerHTML={{ __html: edge.node.content }} />
-              <Appt />
-            </div>
-          )
-        })}
-        {close}
-      </article>
+      <Therapists
+        articleTimeout={props.articleTimeout}
+        article={props.article}
+        onClose={props.onCloseArticle}
+        data={data.bios.edges}
+      />
 
       <article
         id="specialties"
