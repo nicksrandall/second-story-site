@@ -2,81 +2,48 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import Therapists from './therapists.js'
+import { StructuredText } from 'react-datocms'
 
+import Therapists from './therapists.js'
 import Appt from '../components/Appt.js'
 import pic03 from '../images/mom-and-son-optimized.jpg'
 
 const Main = (props) => {
+  // const data = {};
   const data = useStaticQuery(graphql`
     query MainQuery {
-      bios: allWpBio(sort: { fields: date, order: ASC }) {
+      bios: allDatoCmsBio(sort: { order: ASC, fields: position }) {
         edges {
           node {
-            title
-            content
-            featuredImage {
-              node {
-                localFile {
-                  childImageSharp {
-                    gatsbyImageData(
-                      width: 300
-                      placeholder: DOMINANT_COLOR
-                      formats: [AUTO, WEBP, AVIF]
-                    )
-                  }
-                }
-              }
+            name
+            image {
+              gatsbyImageData(width: 300, placeholder: DOMINANT_COLOR)
+            }
+            content {
+              value
             }
           }
         }
       }
-      specialties: wpPage(slug: { eq: "services-and-specialties" }) {
+      specialties: datoCmsSpecialty {
         title
-        content
-        featuredImage {
-          node {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  placeholder: DOMINANT_COLOR
-                  formats: [AUTO, WEBP, AVIF]
-                )
-              }
-            }
-          }
+        content {
+          value
+        }
+        image {
+          gatsbyImageData(placeholder: DOMINANT_COLOR)
         }
       }
-      events: wpPage(slug: { eq: "upcoming-events" }) {
+      events: datoCmsEvent {
         title
-        content
-        featuredImage {
-          node {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  placeholder: DOMINANT_COLOR
-                  formats: [AUTO, WEBP, AVIF]
-                )
-              }
-            }
-          }
+        content {
+          value
         }
       }
-      rates: wpPage(slug: { eq: "rates-and-insurance" }) {
+      rates: datoCmsEvent {
         title
-        content
-        featuredImage {
-          node {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  placeholder: DOMINANT_COLOR
-                  formats: [AUTO, WEBP, AVIF]
-                )
-              }
-            }
-          }
+        content {
+          value
         }
       }
     }
@@ -112,10 +79,13 @@ const Main = (props) => {
       >
         <h2 className="major">{data.specialties.title}</h2>
         <GatsbyImage
-          image={getImage(data.specialties?.featuredImage?.node?.localFile)}
+          image={data.specialties?.image?.gatsbyImageData}
           alt={data.specialties.title}
+          style={{ marginBottom: '2rem' }}
         />
-        <div dangerouslySetInnerHTML={{ __html: data.specialties.content }} />
+        <div style={{ display: 'none' }}>
+          <StructuredText data={data.specialties.content} />
+        </div>
         <Appt />
         {close}
       </article>
@@ -128,11 +98,11 @@ const Main = (props) => {
         style={{ display: 'none' }}
       >
         <h2 className="major">{data.events.title}</h2>
-        <GatsbyImage
-          image={getImage(data.events?.featuredImage?.node?.localFile)}
-          alt={data.events.title}
-        />
-        <div dangerouslySetInnerHTML={{ __html: data.events.content }} />
+        <div
+          style={{ marginBottom: '2rem' }}
+>
+          <StructuredText data={data.events.content} />
+        </div>
         <Appt />
         {close}
       </article>
@@ -145,11 +115,11 @@ const Main = (props) => {
         style={{ display: 'none' }}
       >
         <h2 className="major">{data.rates.title}</h2>
-        <GatsbyImage
-          image={getImage(data.rates?.featuredImage?.node?.localFile)}
-          alt={data.rates.title}
-        />
-        <div dangerouslySetInnerHTML={{ __html: data.rates.content }} />
+        <div
+          style={{ marginBottom: '2rem' }}
+>
+          <StructuredText data={data.rates.content} />
+        </div>
         <Appt />
         {close}
       </article>

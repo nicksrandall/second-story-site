@@ -155,3 +155,11 @@
   animation-timing-function: ease-in-out;
   animation-direction: forwards;
 }
+
+.active p {
+  margin-bottom: 4px;
+}
+
+article.active p:last-child {
+  margin-bottom: 16px;
+}
