@@ -23,7 +23,6 @@ export default function Therapists(props) {
       style={{ display: 'none' }}
     >
       {props.data.map((edge) => {
-        console.log('edge', edge)
         return (
           <div className="profile-main">
             <h2 className="major">{edge.node.name}</h2>
