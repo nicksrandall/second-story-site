@@ -83,7 +83,7 @@ const Main = (props) => {
           alt={data.specialties.title}
           style={{ marginBottom: '2rem' }}
         />
-        <div style={{ display: 'none' }}>
+        <div style={{ marginBottom: '2rem' }}>
           <StructuredText data={data.specialties.content} />
         </div>
         <Appt />
@@ -98,9 +98,7 @@ const Main = (props) => {
         style={{ display: 'none' }}
       >
         <h2 className="major">{data.events.title}</h2>
-        <div
-          style={{ marginBottom: '2rem' }}
->
+        <div style={{ marginBottom: '2rem' }}>
           <StructuredText data={data.events.content} />
         </div>
         <Appt />
@@ -115,9 +113,7 @@ const Main = (props) => {
         style={{ display: 'none' }}
       >
         <h2 className="major">{data.rates.title}</h2>
-        <div
-          style={{ marginBottom: '2rem' }}
->
+        <div style={{ marginBottom: '2rem' }}>
           <StructuredText data={data.rates.content} />
         </div>
         <Appt />
