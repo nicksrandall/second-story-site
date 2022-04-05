@@ -40,7 +40,7 @@ const Main = (props) => {
           value
         }
       }
-      rates: datoCmsEvent {
+      rates: datoCmsRate {
         title
         content {
           value

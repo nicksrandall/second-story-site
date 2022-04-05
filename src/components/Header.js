@@ -18,7 +18,8 @@ const Header = props => (
         <li>
           <a
             href="#"
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault();
               props.onOpenArticle('therapists')
             }}
           >
@@ -28,7 +29,8 @@ const Header = props => (
         <li>
           <a
             href="#"
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault();
               props.onOpenArticle('specialties')
             }}
           >
@@ -38,7 +40,8 @@ const Header = props => (
         <li>
           <a
             href="#"
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault();
               props.onOpenArticle('events')
             }}
           >
@@ -48,7 +51,8 @@ const Header = props => (
         <li>
           <a
             href="#"
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault()
               props.onOpenArticle('rates')
             }}
           >
@@ -58,7 +62,8 @@ const Header = props => (
         <li>
           <a
             href="#"
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault()
               props.onOpenArticle('contact')
             }}
           >
