@@ -79,8 +79,10 @@
 			width: -webkit-max-content;
 			width: -ms-max-content;
 			width: max-content;
+			max-width: 100%;
 			padding-bottom: 0.5rem;
-			margin: 0 0 (_size(element-margin) * 1) 0;
+			margin: 0 auto (_size(element-margin) * 1) auto;
+			text-align: center;
 		}
 	}
 
